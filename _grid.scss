@@ -1,0 +1,35 @@
+// $GRID
+//
+// Fluid and nestable grid system.
+
+// Stack breakpoints until defined breakpoint.
+$boxe-column-stack-breakpoint: tablet !default;
+
+.o-grid {
+  display: block;
+
+  @if (variable-exists(mq-breakpoints)) {
+    @include mq($from: $boxe-column-stack-breakpoint) {
+      display: flex;
+    }
+  }
+
+  /**
+   * 1. By default the children nodes of flex layout have the
+   * min-width set to auto, so that the parent would show all elements
+   * without clipping/overflow. To battle that, we set min-width: 0;
+   */
+  &__column {
+    position: relative;
+    flex-basis: 0; // Width, will divide evenly.
+    flex-grow: 1; // Allow grow.
+    flex-shrink: 1; // Allow shrink.
+    min-width: 0; // [1]
+
+    @if (variable-exists(mq-breakpoints)) {
+      @include mq($until: $boxe-column-stack-breakpoint) {
+        width: 100%;
+      }
+    }
+  }
+}

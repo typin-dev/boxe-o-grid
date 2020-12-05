@@ -1,0 +1,27 @@
+{
+  "name": "boxe-o-grid",
+  "version": "0.1.0",
+  "description": "Fluid and nestable flexbox grid system.",
+  "main": "_grid.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typin-dev/boxe-o-grid.git"
+  },
+  "keywords": [
+    "boxe",
+    "grid",
+    "flexbox",
+    "nestable",
+    "scss",
+    "css"
+  ],
+  "author": "Eduards Torba",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/typin-dev/boxe-o-grid/issues"
+  },
+  "homepage": "https://github.com/typin-dev/boxe-o-grid#readme",
+  "dependencies": {
+    "sass-mq": "~5.0.1"
+  }
+}
